@@ -32,3 +32,12 @@
 
 # Leetcode Question bank
 https://leetcode.com/tag/sliding-window/
+
+## Things I learned solving these problems
+
+### Bitwise XOR
+- The operator for bitwise XOR is ^
+- Its used like a plus sign or multiplication sign
+- You get it by adding binary numbers together, whenever you get two opposing signs you get a 1, any matching signs results in 0.
+- Then you convert that number back into decimal
+
