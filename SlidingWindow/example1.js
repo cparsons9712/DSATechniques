@@ -1,5 +1,7 @@
+// highest sum from a subarray with a given length
+
 const maxSumSubarray = (array, len) => {
-    
+
     let currentSum = 0
 
     // Create the first sum out of the first elements in the array
