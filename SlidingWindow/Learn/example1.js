@@ -2,12 +2,16 @@
 
 const maxSumSubarray = (array, len) => {
 
+    // keep track of the value we are currently calculating
     let currentSum = 0
+
+
 
     // Create the first sum out of the first elements in the array
     for (let i = 0; i < len; i++){
         currentSum += array[i]
     }
+    
     // set the first max to the first possible currentSum
     let maxValue = currentSum
 
