@@ -6,8 +6,9 @@ Here left and right point to the index number of the array, but I use high and l
 to indicate the value at that location. I use an if block to check that the first
 set is added into the sum so that I can keep all of my calculations inside of one
 singular loop.
-Initially I had failed a test case because I set highestAvg to 0 instead of -infinity
-and I had a bug where I forgot to make Math.max override highestAvg.
+Initially I had failed a test case because I set highestAvg to 0 instead of -infinity,
+I failed a different one because I wasn't checking for the edge case of an array holding
+only one value and I had a bug where I forgot to make Math.max override highestAvg.
 *********************************************************************************/
 var findMaxAverage = function (nums, k) {
   let currentSum = 0;
@@ -33,3 +34,5 @@ var findMaxAverage = function (nums, k) {
   }
   return highestAvg.toFixed(5);
 };
+
+

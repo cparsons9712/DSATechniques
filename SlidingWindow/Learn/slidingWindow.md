@@ -157,9 +157,7 @@ The window size is NOT fixed and changes based on specefic criteria/ conditions
 #### Maximum Average Subarray I (Problem 643):
 - https://leetcode.com/problems/maximum-average-subarray-i/description/
 - Find the contiguous subarray of a given length that has the maximum average value.
-#### Find All Anagrams in a String (Problem 438):
-- https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
-- Given two strings s and p, find all the start indices of p's anagrams in s.
+
 #### Subarray Product Less Than K (Problem 713):
 Count the number of contiguous subarrays where the product of all the elements in the subarray is less than k.
 #### Length of the Longest Substring with At Most Two Distinct Characters (Problem 159):
@@ -168,6 +166,10 @@ Count the number of contiguous subarrays where the product of all the elements i
 In a row of trees, the i-th tree produces fruit with type tree[i]. You can start at any tree and move to the right. You have two baskets, and your goal is to collect as many fruits as possible. However, you can only collect one type of fruit in each basket. What is the total amount of fruit you can collect?
 
 ### Medium
+#### Find All Anagrams in a String (Problem 438):
+- https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+- Given two strings s and p, find all the start indices of p's anagrams in s.
+
 #### Minimum Size Subarray Sum (Problem 209):
 Given an array of positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s.
 #### Permutation in String (Problem 567):
