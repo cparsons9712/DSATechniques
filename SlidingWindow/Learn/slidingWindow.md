@@ -20,6 +20,7 @@
 - The input data is an array, linked list or string that we will iterate over
 - Does the problem require looking at an adjoining subarray or substring that is sequential and in order?
 - Is it asking for the subarray or substring to meet a specific condition? (min, max, longest, shortest, unique characters)
+- Can the array possibly have negative numbers? Sliding window CANNOT be used in cases where there are negative windows in the array! Use cumulative sum instead.
 
 ### Varients of questions
 
@@ -85,8 +86,8 @@ The window size is NOT fixed and changes based on specefic criteria/ conditions
 
 
     while (end < n){
-        // CASE 1: window needs to be bigger
-            // k is the desired window size
+        // CASE 1: window needs to be bigger (k = desired window size)
+
         if (end - start + 1 < k){
             end++
 
@@ -150,27 +151,35 @@ The window size is NOT fixed and changes based on specefic criteria/ conditions
 - Everything grouped sequentially
 - longest / smallest / contains / max / min
 
-# Leetcode Question bank
+## Leetcode Question bank
 
-## Easy
-- 1876. Substrings of Size Three with Distinct Characters
-    - https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
+### Easy
+#### Maximum Average Subarray I (Problem 643):
+- https://leetcode.com/problems/maximum-average-subarray-i/description/
+- Find the contiguous subarray of a given length that has the maximum average value.
+#### Find All Anagrams in a String (Problem 438):
+- https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+- Given two strings s and p, find all the start indices of p's anagrams in s.
+#### Subarray Product Less Than K (Problem 713):
+Count the number of contiguous subarrays where the product of all the elements in the subarray is less than k.
+#### Length of the Longest Substring with At Most Two Distinct Characters (Problem 159):
+ Given a string s, return the length of the longest substring that contains at most two distinct characters.
+#### Fruits into Baskets (Problem 904):
+In a row of trees, the i-th tree produces fruit with type tree[i]. You can start at any tree and move to the right. You have two baskets, and your goal is to collect as many fruits as possible. However, you can only collect one type of fruit in each basket. What is the total amount of fruit you can collect?
 
+### Medium
+#### Minimum Size Subarray Sum (Problem 209):
+Given an array of positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s.
+#### Permutation in String (Problem 567):
+Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
+#### Longest Substring Without Repeating Characters (Problem 3):
+Given a string s, find the length of the longest substring without repeating characters.
 
-- Subarray Sum Equals K (LeetCode 560):
-    - This problem can be approached with a sliding window, especially when dealing with non-negative numbers. However, a more general solution involves using a cumulative sum and a hashmap, which isn't exactly a sliding window but shares some conceptual similarities.
-
-- Find All Anagrams in a String (LeetCode 438):
-    - This problem is a perfect candidate for the sliding window technique, where you slide over the string and check for anagrams using a hashmap to count characters.
-
-- Permutation in String (LeetCode 567):
-    - Similar to finding anagrams, this problem can be solved efficiently with a sliding window, checking if a substring contains a permutation of another string.
-
-- Longest Substring Without Repeating Characters (LeetCode 3):
-    - This is a great problem to apply the sliding window technique, where you need to find the length of the longest substring without repeating characters.
-
-- Fruits into Baskets (LeetCode 904):
-    - This problem is essentially about finding the longest substring with up to two distinct characters, which can be solved with a sliding window maintaining the count of each type of fruit.
+### Hard
+#### Minimum Window Substring (Problem 76):
+Given two strings s and t, return the minimum window in s which will contain all the characters in t.
+#### Sliding Window Maximum (Problem 239):
+Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position, return the max sliding window.
 
 
 
