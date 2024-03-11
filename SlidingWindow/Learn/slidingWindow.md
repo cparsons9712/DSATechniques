@@ -4,8 +4,8 @@
 
 - The idea of sliding windows is to convert nested loops into a single loop
 - It allows you to change the time complexity from O(n^2) or O(n^3) to O(n)
-- A sliding window is a subarray
-- As the loop progresses, we update the values in the subarray
+- A window is a subarray or substring
+- As the loop progresses, we update the values in the subarray by adding the newest and removing the oldest. that means if we are keeping track of a sum we would += the new value and -= the value at the low pointer before moving it up
 
 ## Techniques
 
@@ -32,31 +32,46 @@ Predefined window size that remains constant
   - Template:
 
   ```
-  Const fixedWindow = (arr, k) => {
-      let low = 0;
-      let high = 0;
-      windowLength = k
+    const fixedWindow = (arr, k) => {
+        let low = 0;
+        let high = 0;
+        let windowLength = k; // The fixed size of the window
 
-      let i = 0
-      while(i < arr.length){
+        while (high < arr.length) {
+            // STEP ONE: Expand the window by moving the 'high' pointer to the right.
+            // The window grows until it is one less than the desired size.
+            // This adjustment accounts for the addition of a new element before the next iteration.
+            if (high - low + 1 < windowLength) {
+                // Add logic here to process the element entering the window, if needed
+                high++;
+            } else {
+                // STEP TWO: The window is now at the desired size.
 
-          // STEP ONE: Create window that is one element smaller than desired window size by increasing the high pointer until the size is reached
+                // A: Calculate and update the result based on the current window contents.
+                //    This could involve summing elements, finding a minimum, etc.
 
-          if (high - low +1 < windowLength){
-              high++;
+                // Update logic for calculating results from the window here
 
+                // B: Slide the window forward by one element.
+                // This involves incrementing 'low' to remove the oldest element and 'high' to add a new element.
+                if (high + 1 < arr.length) {
+                    // Logic to remove the influence of the element exiting the window
+                    low++;
 
-          } else {
-              // STEP TWO: when window is large enough
-              // A: Calculate the answer from the window
-              // B: Increase the low pointer to remove oldest element
-              // C: Move high pointer up by one to add new element to window
-          }
-      }
-  }
+                    // Logic to include the next element in the window
+                    high++;
+                } else {
+                    // If there are no more elements to add, break the loop or adjust as needed
+                    break;
+                }
+            }
+        }
+
+        // Include any post-processing or return statements here
+    }
   ```
 
-#### 2 variable window
+#### Variable window
 The window size is NOT fixed and changes based on specefic criteria/ conditions
 - Method to solve:
     - Use two pointers for start and end of window. They both start at index 0
@@ -103,6 +118,32 @@ The window size is NOT fixed and changes based on specefic criteria/ conditions
     }
     return answer
     ```
+#### Using Pointers and Hashmap
+    ```
+    const complexWindow = (string, len) => {
+        // initialize pointers, accumulator and hashmap
+
+        // loop should continue until the high pointer reaches the end
+
+
+            // Add the current value to the Map and expand the window by moving high pointer
+
+
+            // Check the length of the window by subtracting low from high to see if its the right length
+
+                // if there are additional constraints outside of window size (EX unique characters) check for it
+
+                    // do the calculations
+
+                // undo any changes that the item at low pointer has made (Example: subtract from sum or remove from map)
+
+                // move the low pointer up one to move the window over
+
+            }
+        }
+        // return the result
+    }
+    ```
 
 ### Commonalities?
 
@@ -111,13 +152,36 @@ The window size is NOT fixed and changes based on specefic criteria/ conditions
 
 # Leetcode Question bank
 
-https://leetcode.com/tag/sliding-window/
+## Easy
+- 1876. Substrings of Size Three with Distinct Characters
+    - https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
 
-## Things I learned solving these problems
 
-### Bitwise XOR
+- Subarray Sum Equals K (LeetCode 560):
+    - This problem can be approached with a sliding window, especially when dealing with non-negative numbers. However, a more general solution involves using a cumulative sum and a hashmap, which isn't exactly a sliding window but shares some conceptual similarities.
 
-- The operator for bitwise XOR is ^
-- Its used like a plus sign or multiplication sign
-- You get it by adding binary numbers together, whenever you get two opposing signs you get a 1, any matching signs results in 0.
-- Then you convert that number back into decimal
+- Find All Anagrams in a String (LeetCode 438):
+    - This problem is a perfect candidate for the sliding window technique, where you slide over the string and check for anagrams using a hashmap to count characters.
+
+- Permutation in String (LeetCode 567):
+    - Similar to finding anagrams, this problem can be solved efficiently with a sliding window, checking if a substring contains a permutation of another string.
+
+- Longest Substring Without Repeating Characters (LeetCode 3):
+    - This is a great problem to apply the sliding window technique, where you need to find the length of the longest substring without repeating characters.
+
+- Fruits into Baskets (LeetCode 904):
+    - This problem is essentially about finding the longest substring with up to two distinct characters, which can be solved with a sliding window maintaining the count of each type of fruit.
+
+
+
+
+# Sources
+
+https://leetcode.com/discuss/interview-question/3722472/mastering-sliding-window-technique-a-comprehensive-guide
+
+<br>
+Question Bank:
+<br>
+https://leetcode.com/discuss/study-guide/3630462/Top-20-Sliding-Window-Problems-for-beginners
+
+<br>
