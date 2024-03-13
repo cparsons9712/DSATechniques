@@ -1,4 +1,4 @@
-# Leetcode Question bank
+# Leetcode Sliding Window Question bank
 
 ## Easy
 ### [643. Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/description/)
@@ -8,7 +8,7 @@
 - [x] Directly applies sliding window to compute sums over a circular array, great for understanding the basic mechanics of sliding windows.
 
 ### [2379 Minimum Recolors to Get K Consecutive Black Blocks](https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/description/)
-- [ ] Illustrates the use of sliding window for optimizing a count over a fixed-length subarray.
+- [x] Illustrates the use of sliding window for optimizing a count over a fixed-length subarray.
 
 ### [1984 Minimum Difference Between Highest and Lowest of K Scores:](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/description/)
 - [ ] Teaches how to apply sliding window on sorted data to find minimum range differences.

@@ -83,3 +83,22 @@ var decrypt = function(code, k) {
       return resArr;
   }
 };
+
+/********************************************************************************
+2379. Minimum Recolors to Get K Consecutive Black Blocks
+https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/description/
+
+*********************************************************************************/
+var minimumRecolors = function(blocks, k) {
+  let minWhite = k; // worst case is we have all white blocks
+  let currWhite = 0; // keep track of running sum
+
+  for (let i = 0; i < blocks.length; i++){
+      if(blocks[i] === 'W') currWhite++; // high part of window
+      if(i >= k-1){ // Subtract 1 because index 0 is included
+          minWhite = Math.min(minWhite, currWhite)  //update high score if need be
+          if(blocks[i-k+1] === 'W') currWhite--; // low part of window
+      }
+  }
+  return minWhite
+};
