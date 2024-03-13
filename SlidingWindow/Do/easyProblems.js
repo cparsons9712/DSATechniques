@@ -35,4 +35,51 @@ var findMaxAverage = function (nums, k) {
   return highestAvg.toFixed(5);
 };
 
+/********************************************************************************
+1652. Defuse the Bomb
+https://leetcode.com/problems/defuse-the-bomb/description/
 
+Initially we use if else statements to direct the code for each possible K type.
+We get the first sum out of the loop and save it into a preallocated result array.
+We also go ahead and remove the amount that the window is moving away from to prepare
+for the loop since the first thing the loop does is add a value.
+
+*********************************************************************************/
+var decrypt = function(code, k) {
+
+  //case 1: k is 0; return array filled with zeros
+  let resArr = new Array(code.length).fill(0)
+  if (k === 0) return resArr;
+
+  //case 2: K is positive; currentNum should be sum of next k chars
+  if(k > 0){
+      let currPos = 0;
+      let sum = code.slice(1,k+1).reduce((a,b)=>a+b) //get the first sum (from 1 to k)
+      resArr[0] = sum // save the first result
+      currPos++; // move curr to 1
+      sum -= code[1] //remove the old value from the sum
+      while (currPos < code.length){
+          let newIndex = (currPos + k )% code.length //new position is k away- restarting at 0 when out of space
+          sum += code[newIndex]// add in the new amount
+          resArr[currPos] = sum// save the value in result array
+          sum -= code[currPos+1]// remove oldest amount
+          currPos++;// move curr
+      }
+      return resArr
+
+  //case 3: K is negative
+  }else{
+      //results[0] would be the last k elements in the array added together
+      let sum = code.slice(code.length+k, code.length).reduce((a,b)=> a+b)
+      resArr[0] = sum
+      sum -= code[code.length+k]// remove the oldest to prepare for loop
+
+      for(let currPos = 1; currPos < code.length; currPos++){
+          sum+= code[currPos-1] // add new number into sum
+          resArr[currPos] = sum // save the result
+          let oldPos = (code.length+k +currPos) % code.length // get the index for the oldest amount in sum
+          sum -= code[oldPos] // remove oldest num from sum
+      }
+      return resArr;
+  }
+};
