@@ -102,3 +102,26 @@ var minimumRecolors = function(blocks, k) {
   }
   return minWhite
 };
+
+/********************************************************************************
+1984. Minimum Difference Between Highest and Lowest of K Scores
+https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/description/
+
+*********************************************************************************/
+
+var minimumDifference = function(nums, k) {
+  // EDGE CASE: with less nums than k theres no need to iterate, we can just get the
+  // and low. if theres only one num the maths will fill both slots with that num
+  // and we will get 0.
+    if(nums.length <= k) return Math.max(...nums) - Math.min(...nums)
+    let recordDiff = Infinity; // higheset possible number
+    nums.sort((a,b)=>a-b); // since the question doesnt state continous we can sort it
+    let lowIndex = 0 // this will be our low pointer
+    for(let i = k-1; i < nums.length; i++){ // we will start at the high pointer
+        let currHigh = nums[i] // actual value for high
+        let currLow = nums[lowIndex] // actual value for low
+        let diff = currHigh - currLow; // calculate the difference
+        recordDiff = Math.min(recordDiff, diff) // we need to choose to save lowest num
+    }
+    return recordDiff // send results
+};

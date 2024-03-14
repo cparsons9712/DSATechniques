@@ -11,7 +11,7 @@
 - [x] Illustrates the use of sliding window for optimizing a count over a fixed-length subarray.
 
 ### [1984 Minimum Difference Between Highest and Lowest of K Scores:](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/description/)
-- [ ] Teaches how to apply sliding window on sorted data to find minimum range differences.
+- [x] Teaches how to apply sliding window on sorted data to find minimum range differences.
 
 ### [219 Contains Duplicate II:](https://leetcode.com/problems/contains-duplicate-ii/description/)
 - [ ] Good for understanding how sliding window combined with hashing can track elements' presence within a specific range.
