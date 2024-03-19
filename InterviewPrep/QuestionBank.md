@@ -1,4 +1,4 @@
-1.**Two Sum** - `Arrays`, `Hashing` <br>
+<s>1.**Two Sum** - `Arrays`, `Hashing` </s><br>
 2. **Valid Parentheses** - `Stacks`, `String Parsing`<br>
 3. **Merge Two Sorted Lists** - `Linked Lists`<br>
 4. **Best Time to Buy and Sell Stock** - `Arrays`, `Dynamic Programming`<br>
