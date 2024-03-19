@@ -17,3 +17,19 @@ var twoSum = function(nums, target) {
 
     }
 };
+
+
+/*
+217. Contains Duplicate
+https://leetcode.com/problems/contains-duplicate/description/
+*/
+var containsDuplicate = function(nums) {
+    let numsHash = {}
+    for(let i = 0; i < nums.length; i++){
+        let currNum = nums[i]
+        if (numsHash[currNum] !== undefined) return true;
+        numsHash[currNum] = 1;
+    }
+
+    return false
+};

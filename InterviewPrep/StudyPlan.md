@@ -1,57 +1,69 @@
-## Arrays and Strings
-Understand how to iterate, manipulate, and use two-pointer techniques.
-- <s>Two Sum (Arrays, Hashing)<s>
-- Best Time to Buy and Sell Stock (Arrays, Dynamic Programming)
-- Valid Anagram (Strings, Hash Table)
-- First Unique Character in a String (Strings, Hash Table)
-- Reverse String (Two Pointers, Strings)
-## Linked Lists
-- Focus on traversal, insertion, deletion, and two-pointer techniques.
-- Merge Two Sorted Lists (Linked Lists)
-- Palindrome Linked List (Linked Lists, Two Pointers)
-- Reverse Linked List (Linked Lists)
-- Linked List Cycle (Two Pointers, Linked Lists)
-- Intersection of Two Linked Lists (Two Pointers, Linked Lists)
-1. Stacks and Queues
-## Learn about LIFO/FIFO concepts, implementations, and common use cases.
-- Valid Parentheses (Stacks, Strings)
-- Implement Queue using Stacks (Stack, Queue)
-- Min Stack (Stack, Design)
-- Implement Stack using Queues (Stack, Queue)
-- Backspace String Compare (Stack, Two Pointers)
-## Hashing
-Get comfortable with using hash tables for efficient data retrieval and storage.
-- Contains Duplicate (Array, Hash Table)
-- Group Anagrams (Strings, Hash Table)
-- Intersection of Two Arrays II (Hash Table, Two Pointers)
-- Happy Number (Hash Table, Math)
-- Single Number (Hash Table, Bit Manipulation)
-## Trees
-Study tree traversal techniques (in-order, pre-order, post-order) and binary tree basics.
-Maximum Depth of Binary Tree (Trees, Depth-first Search)
-Symmetric Tree (Trees, Breadth-first Search)
-Convert Sorted Array to Binary Search Tree (Trees, Depth-first Search)
-Merge Two Binary Trees (Trees, Depth-first Search)
-Balanced Binary Tree (Trees, Depth-first Search)
-## Searching and Sorting
-Enhance your skills in binary search, and understand the fundamentals of sorting algorithms.
-Binary Search (Array, Binary Search)
-First Bad Version (Binary Search)
-Squares of a Sorted Array (Two Pointers, Sorting)
-Merge Sorted Array (Two Pointers, Sorting)
-Find All Numbers Disappeared in an Array (Array, Hash Table)
+# 1 Month Study Guide
 ## Dynamic Programming
-Start with simple problems to understand the concept of state and the transition between states.
-Climbing Stairs (Dynamic Programming)
-Min Cost Climbing Stairs (Dynamic Programming)
-Maximum Subarray (Array, Dynamic Programming)
-House Robber (Dynamic Programming)
-Fibonacci Number (Array, Dynamic Programming)
-## Basic Math and Logic
-Practice problems that require mathematical calculations, understanding of number theory, or logical reasoning.
-Fizz Buzz (Math, Simulation)
-Count Primes (Math, Hash Table)
-Roman to Integer (Math, String)
-Add Digits (Math)
-Power of Three (Math, Recursion)
+Understand the idea of storing intermediate results to avoid redundant calculations, optimizing recursive solutions, and understanding overlapping subproblems.
 
+- Climbing Stairs - Understand basic recursion and memoization.
+- Min Cost Climbing Stairs - Similar to Climbing Stairs, with a cost twist.
+- Maximum Subarray - Introductory problem for contiguous subarray problems (Kadane’s algorithm).
+- House Robber - Basic problem illustrating non-adjacent element picking with optimization.
+- Fibonacci Number - Classic example to demonstrate the effectiveness of memoization.
+## Two Pointers
+Master the technique of using two pointers to reduce complexity, particularly in problems involving arrays or linked lists.
+
+Two Sum II - Input Array Is Sorted - Basic two-pointer usage in a sorted array.
+Reverse String - In-place reversal demonstrating the two-pointer technique.
+Palindrome Linked List - Utilize two pointers to check for palindrome properties in a linked list.
+Merge Sorted Array - A clear example of the two-pointer method in merging arrays.
+Backspace String Compare - Creative use of two pointers in a string comparison problem.
+
+## Hash Map
+Learn to use hash maps (objects in JavaScript) for fast data retrieval, frequency counting, and mapping relationships.
+
+### Easy Problems
+<s>
+- Two Sum - Classic problem for understanding the utility of hash maps in quick look-up.
+- Contains Duplicate - Simple usage of a hash set to track uniqueness.
+  </s>
+- Group Anagrams - Grouping strings by character frequency using a hash map.
+- First Unique Character in a String - Find characters by building and querying a frequency map.
+- Intersection of Two Arrays - Demonstrates efficient look-up and set operations.
+
+## Depth-First Search (DFS)
+Get comfortable with recursion and backtracking, exploring all paths or possibilities to a certain depth.
+
+Maximum Depth of Binary Tree - Basic introduction to tree traversal with DFS.
+Path Sum - Check for path existence and sum computation in binary trees.
+Flood Fill - Typical use case of DFS in a grid/matrix (similar to the paint bucket tool).
+Binary Tree Paths - Finding all root-to-leaf paths in a binary tree using DFS.
+Sum of Root To Leaf Binary Numbers - Calculating the sum from binary numbers formed by root to leaf paths.
+Breadth-First Search (BFS)
+Practice the BFS pattern, often used in shortest path problems or in scenarios where you need to traverse level by level.
+
+Binary Tree Level Order Traversal - Classic problem to understand level-by-level traversal.
+Minimum Depth of Binary Tree - Finding the shortest path to a leaf node.
+Symmetric Tree - Leveraging BFS to check for symmetry in a binary tree.
+Average of Levels in Binary Tree - Calculating averages at each level of a binary tree.
+Find Largest Value in Each Tree Row - Identify the largest value at each level of a binary tree.
+Binary Search
+Develop an understanding of the binary search algorithm in sorted arrays, optimizing time complexity from O(n) to O(log n).
+
+Binary Search - The fundamental problem to understand binary search.
+First Bad Version - Application of binary search in a decision-making process.
+Guess Number Higher or Lower - Implementing binary search in a guess-the-number game.
+Search Insert Position - Binary search application to find the insert position in a sorted array.
+Arranging Coins - Utilizing binary search to solve mathematical problems efficiently.
+Math and Logic
+Enhance your problem-solving skills with problems that require mathematical reasoning, logical deduction, or straightforward computation.
+
+Fizz Buzz - A simple loop and conditionals problem focusing on modulo operation.
+Count Primes - Mathematical understanding of prime numbers.
+Roman to Integer - Basic math combined with string parsing.
+Missing Number - Using mathematical formulae or bit manipulation to find the missing number.
+Power of Three - Understanding loops, recursion, or mathematical properties of numbers.
+Sorting
+Learn sorting algorithms and understand how sorted data can significantly simplify the problem-solving process.
+
+Merge Sorted Array - Merging two sorted arrays, understanding in-place sorting.
+Contains Duplicate - Checking for duplicates in an array post-sorting.
+Assign Cookies - Greedy approach with sorting to satisfy conditions optimally.
+Kth Largest Element in a Stream - Utilizing sorting/min-heap to find the Kth largest element continuously
