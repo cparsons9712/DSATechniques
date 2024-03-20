@@ -33,3 +33,18 @@ var containsDuplicate = function(nums) {
 
     return false
 };
+
+/*
+49. Group Anagrams
+https://leetcode.com/problems/group-anagrams/description/
+*/
+
+var groupAnagrams = function(strs) {
+    let map = {}
+    for(let string of strs){
+        let sorted = string.split('').sort().join('')
+        if(map[sorted] === undefined) map[sorted] = [];
+        map[sorted].push(string)
+    }
+    return Object.values(map)
+};
