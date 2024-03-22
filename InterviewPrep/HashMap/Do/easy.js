@@ -48,3 +48,27 @@ var groupAnagrams = function(strs) {
     }
     return Object.values(map)
 };
+
+/*
+387. First Unique Character in a String
+https://leetcode.com/problems/first-unique-character-in-a-string/description/
+*/
+var firstUniqChar = function(s) {
+    const hash = {}
+    for (let i = 0; i < s.length; i++){
+        if (hash[s[i]] === undefined) hash[s[i]] = [i, 0];
+        hash[s[i]][1] ++;
+    }
+    let lowestInx = null
+    let keys = Object.keys(hash)
+
+    for(let key of keys){
+        let curr = hash[key]
+        if(curr[1] === 1 && curr[0] === 0) return 0
+        if(curr[1] === 1 && (!lowestInx || lowestInx > curr[0])){
+            lowestInx = curr[0]
+        }
+    }
+    return (lowestInx || -1)
+
+};
