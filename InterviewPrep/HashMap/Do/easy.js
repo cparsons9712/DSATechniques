@@ -72,3 +72,18 @@ var firstUniqChar = function(s) {
     return (lowestInx || -1)
 
 };
+
+/*
+349. Intersection of Two Arrays
+https://leetcode.com/problems/intersection-of-two-arrays/description/
+*/
+var intersection = function(nums1, nums2) {
+    let nums = new Set(nums1)
+    let checkNums = new Set(nums2)
+    let res = []
+
+    for (let n of nums){
+        if(checkNums.has(n)) res.push(n)
+    }
+    return res
+};
