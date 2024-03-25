@@ -10,11 +10,11 @@ Understand the idea of storing intermediate results to avoid redundant calculati
 ## Two Pointers
 Master the technique of using two pointers to reduce complexity, particularly in problems involving arrays or linked lists.
 
-Two Sum II - Input Array Is Sorted - Basic two-pointer usage in a sorted array.
-Reverse String - In-place reversal demonstrating the two-pointer technique.
-Palindrome Linked List - Utilize two pointers to check for palindrome properties in a linked list.
-Merge Sorted Array - A clear example of the two-pointer method in merging arrays.
-Backspace String Compare - Creative use of two pointers in a string comparison problem.
+- <s>Two Sum II - Input Array Is Sorted - Basic two-pointer usage in a sorted array. </s>
+- Reverse String - In-place reversal demonstrating the two-pointer technique.
+- Palindrome Linked List - Utilize two pointers to check for palindrome properties in a linked list.
+- Merge Sorted Array - A clear example of the two-pointer method in merging arrays.
+- Backspace String Compare - Creative use of two pointers in a string comparison problem.
 
 ## Hash Map
 Learn to use hash maps (objects in JavaScript) for fast data retrieval, frequency counting, and mapping relationships.
