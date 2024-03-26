@@ -31,6 +31,22 @@ var reverseString = function(s) {
 234. Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/description/
 *******************************************************/
+var isPalindrome = function(head) {
+    let arr = [];
+    while (head){
+        arr.push(head.val);
+        head = head.next;
+    }
+    let s = 0;
+    let e = arr.length-1;
+    while (e > s){
+        if (arr[s] !== arr[e]) return false;
+        s++;
+        e--;
+    }
+    return true;
+};
+
 
 /*****************************************************
 2824. Count Pairs Whose Sum is Less than Target
