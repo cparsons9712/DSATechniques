@@ -1,6 +1,3 @@
-
-
-
 /*****************************************************
 167. Two Sum II - Input Array Is Sorted
 https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
@@ -18,9 +15,17 @@ var twoSum = function(numbers, target) {
 
 /*****************************************************
 344. Reverse String
-hhttps://leetcode.com/problems/reverse-string/description/
+https://leetcode.com/problems/reverse-string/description/
 *******************************************************/
-
+var reverseString = function(s) {
+    let start = 0;
+    let end = s.length -1;
+    while (end > start){
+        [s[start], s[end]] = [s[end], s[start]]
+        start++;
+        end --;
+    }
+};
 
 /*****************************************************
 234. Palindrome Linked List
