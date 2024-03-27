@@ -10,9 +10,9 @@ Understand the idea of storing intermediate results to avoid redundant calculati
 ## Two Pointers
 Master the technique of using two pointers to reduce complexity, particularly in problems involving arrays or linked lists.
 
-- <s>Two Sum II - Input Array Is Sorted - Basic two-pointer usage in a sorted array. </s>
+- <s>Two Sum II - Input Array Is Sorted - Basic two-pointer usage in a sorted array.
 - Reverse String - In-place reversal demonstrating the two-pointer technique.
-- Palindrome Linked List - Utilize two pointers to check for palindrome properties in a linked list.
+- Palindrome Linked List - Utilize two pointers to check for palindrome properties in a linked list.</s>
 - Merge Sorted Array - A clear example of the two-pointer method in merging arrays.
 - Backspace String Compare - Creative use of two pointers in a string comparison problem.
 

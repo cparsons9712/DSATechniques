@@ -52,7 +52,25 @@ var isPalindrome = function(head) {
 2824. Count Pairs Whose Sum is Less than Target
 https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/description/
 *******************************************************/
+var countPairs = function(nums, target) {
+    sorted = nums.toSorted((a,b)=> a-b)
+    let count = 0;
+    let i = 0;
+    let j = sorted.length-1;
+    while (i < j){
+        let low = sorted[i];
+        let high= sorted[j];
+        if (low + high < target){
+            count += j -i;
+            i++;
+        }
+        if (low+high >= target){
+            j--;
+        }
+    }
+    return count;
 
+};
 /*****************************************************
  844. Backspace String Compare
 https://leetcode.com/problems/backspace-string-compare/description/
