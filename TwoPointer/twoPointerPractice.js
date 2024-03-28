@@ -75,3 +75,19 @@ var countPairs = function(nums, target) {
  844. Backspace String Compare
 https://leetcode.com/problems/backspace-string-compare/description/
 *******************************************************/
+var backspaceCompare = function(s, t) {
+    const getString = (string) => {
+        let resStack = [];
+        for(let i = 0; i < string.length; i++){
+            if (string[i] === '#') {
+                resStack.pop()
+            }else{
+                resStack.push(string[i])
+            }
+        }
+        return resStack.join('');
+    }
+
+
+    return getString(s) === getString(t)
+};
