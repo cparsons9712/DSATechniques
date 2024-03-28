@@ -91,3 +91,48 @@ var backspaceCompare = function(s, t) {
 
     return getString(s) === getString(t)
 };
+
+var backspaceCompare = function(s, t) {
+    let sP = s.length - 1;
+    let tP = t.length - 1;
+
+    while (sP >= 0 || tP >= 0) { // Continue until both pointers are out of bounds
+        let skipS = 0, skipT = 0;
+
+        // Skip characters in s
+        while (sP >= 0) {
+            if (s[sP] === '#') {
+                skipS++, sP--;
+            } else if (skipS > 0) {
+                skipS--, sP--;
+            } else {
+                break;
+            }
+        }
+
+        // Skip characters in t
+        while (tP >= 0) {
+            if (t[tP] === '#') {
+                skipT++, tP--;
+            } else if (skipT > 0) {
+                skipT--, tP--;
+            } else {
+                break;
+            }
+        }
+
+        // Check if current characters are equal
+        if (sP >= 0 && tP >= 0 && s[sP] !== t[tP]) {
+            return false; // Characters don't match
+        }
+
+        // Check if we've run out of characters in only one string
+        if ((sP >= 0) !== (tP >= 0)) {
+            return false; // One string ended but the other didn't
+        }
+
+        sP--, tP--; // Move pointers back
+    }
+
+    return true; // All compared characters matched
+};
