@@ -1,0 +1,31 @@
+{
+  "name": "dsatechniques",
+  "version": "1.0.0",
+  "description": "A place to understand and practice data structures and algorithms ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cparsons9712/DSATechniques.git"
+  },
+  "keywords": [
+    "dsa",
+    "data",
+    "structures",
+    "algorithms",
+    "leetcode"
+  ],
+  "author": "Christine Parsons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cparsons9712/DSATechniques/issues"
+  },
+  "homepage": "https://github.com/cparsons9712/DSATechniques#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "jest": "^29.7.0"
+  }
+}
