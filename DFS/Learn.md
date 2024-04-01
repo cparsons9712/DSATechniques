@@ -7,4 +7,4 @@
 3) Be sure to mark the nodes you visited
 4) GO until empty
 
-![alt text](image.png)
+![alt text](image-1.png)
