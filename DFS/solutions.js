@@ -23,8 +23,27 @@
   };
 
  /*******************************
-  Path Sum
+  112. Path Sum
+
+    https://leetcode.com/problems/path-sum/description/
+
+    Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
   ***********************************/
+    var hasPathSum = function(root, targetSum) {
+      if (!root) return false;
+      const stack = [[root, root.val]];
+      while(stack.length){
+          let [curr, currSum] = stack.pop();
+
+          if(!curr.left && !curr.right){
+              if(targetSum === currSum) return true
+          }
+          if(curr.left) stack.push([curr.left, currSum + curr.left.val])
+          if(curr.right) stack.push([curr.right, currSum + curr.right.val])
+      }
+      return false
+  };
+
 
  /*******************************
     Flood Fill
