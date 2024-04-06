@@ -74,3 +74,6 @@ Learn sorting algorithms and understand how sorted data can significantly simpli
 - Contains Duplicate - Checking for duplicates in an array post-sorting.
 - Assign Cookies - Greedy approach with sorting to satisfy conditions optimally.
 - Kth Largest Element in a Stream - Utilizing sorting/min-heap to find the Kth largest element continuously
+
+
+![alt text](image.png)
