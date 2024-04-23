@@ -1,4 +1,0 @@
-// I am using babel so that jest can understand es6 Syntax
-{
-  "presets": ["@babel/preset-env"]
-}
