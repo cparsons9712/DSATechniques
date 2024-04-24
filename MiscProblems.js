@@ -7,13 +7,16 @@ var titleToNumber = function(columnTitle) {
         let letter = abc[i];
         alphaMap[letter] = i+1
     }
-    if (columnTitle.length < 2) return alphaMap[columnTitle]
+    if (columnTitle.length < 1) return alphaMap[columnTitle]
 
-    let tens = alphaMap[columnTitle[0]] * 26
-    let ones = alphaMap[columnTitle[1]]
-    let total = 0
-    for (let j = 0; j < columnTitle.length; j++){
-
+    let multiplier = columnTitle.length-1;
+    let sum = alphaMap[columnTitle[columnTitle.length-1]]
+    for(let i = 0; i < columnTitle.length-1; i ++){
+        pos = alphaMap[columnTitle[i]]
+        let amount = 26**multiplier*pos
+        sum+= amount;
+        multiplier --;
     }
+    return sum
 
 };
