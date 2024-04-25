@@ -89,10 +89,29 @@
     Binary Tree Paths
     https://leetcode.com/problems/binary-tree-paths/description/
   ***********************************/
+    var binaryTreePaths = function(root) {
+      let stack = [{node: root, path: `${root.val}`}]
+      let res = []
+      while(stack.length > 0){
+          let {node, path} = stack.pop()
 
+          if (node.left || node.right) {
+              if(node.left){
+                  let leftPath = path+ `->${node.left.val}`
+                  stack.push({node: node.left, path: leftPath})
+              }
+              if(node.right){
+                  let rightPath = path + `->${node.right.val}`
+                  stack.push({node: node.right, path: rightPath})
+              }
+          }else{
+              res.push(path)
+          }
+      }
+      return res
+  };
 
 
   /*******************************
     Sum of Root To Leaf Binary Numbers
   ***********************************/
-  
