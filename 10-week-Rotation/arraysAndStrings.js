@@ -1,7 +1,7 @@
 /*******************************
- * Day 1: Iteration
+ * Iteration
  ********************************/
-// two sum leetcode problem 1
+// --- Part one ------
 var twoSum = function(nums, target) {
 
     let seen = {};
@@ -33,4 +33,24 @@ var merge = function(nums1, m, nums2, n) {
         }
         p--;
     }
+};
+
+var moveZeroes = function(nums) {
+    let secondArr = new Array(nums.length);
+    let pointer = 0
+    let endPointer = nums.length-1
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i]) {
+            secondArr[pointer] = nums[i];
+            pointer ++;
+        }else{
+            secondArr[endPointer] = 0;
+            endPointer --;
+        }
+
+    }
+    for(let i = 0; i < secondArr.length; i++){
+        nums[i] = secondArr[i]
+    }
+
 };
