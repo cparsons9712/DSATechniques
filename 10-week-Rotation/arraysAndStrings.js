@@ -15,21 +15,22 @@ var twoSum = function(nums, target) {
 
 
 var merge = function(nums1, m, nums2, n) {
-    let a = nums1[m-1]
-    let b = nums2[n-1]
+    m--;
+    n--;
+    let a = nums1[m]
+    let b = nums2[n]
     let p = nums1.length-1;
     while (p >= 0){
-        if(a > b ){
+        if(b === undefined || a > b ){
             nums1[p] = a;
             m--;
             a = nums1[m]
         }else{
+
             nums1[p] = b;
             n--;
             b = nums2[n]
         }
         p--;
     }
-
-
 };
